@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Market Requirements Document</title>
+
+<!-- INTERNAL CSS -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f8;
+        color: #333;
+    }
+
+    header {
+        background: #1976d2;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        background: #0d47a1;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav button {
+        background: white;
+        border: none;
+        padding: 8px 12px;
+        margin: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+
+    nav button:hover {
+        background: #bbdefb;
+    }
+
+    section {
+        display: none;
+        background: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    section.active {
+        display: block;
+    }
+
+    h2 {
+        color: #1976d2;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background: #ddd;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Market Requirements Document</h1>
+    <p>Product / Business Name</p>
+</header>
+
+<nav>
+    <button onclick="showSection('overview')">Overview</button>
+    <button onclick="showSection('customers')">Customers</button>
+    <button onclick="showSection('problem')">Problem</button>
+    <button onclick="showSection('needs')">Market Needs</button>
+    <button onclick="showSection('competitors')">Competitors</button>
+    <button onclick="showSection('metrics')">Success Metrics</button>
+</nav>
+
+<section id="overview" class="active">
+    <h2>Market Overview</h2>
+    <p>
+        This market focuses on solving a specific customer problem.
+        It includes trends, market size, and growth opportunities.
+    </p>
+</section>
+
+<section id="customers">
+    <h2>Target Customers</h2>
+    <ul>
+        <li>Age group: 15–30</li>
+        <li>Location: Urban & suburban areas</li>
+        <li>Tech-savvy users</li>
+    </ul>
+</section>
+
+<section id="problem">
+    <h2>Problem Statement</h2>
+    <p>
+        Customers struggle with inefficient, time-consuming solutions
+        that do not meet their expectations.
+    </p>
+</section>
+
+<section id="needs">
+    <h2>Market Needs</h2>
+    <ul>
+        <li>Easy-to-use solution</li>
+        <li>Affordable pricing</li>
+        <li>Reliable performance</li>
+    </ul>
+</section>
+
+<section id="competitors">
+    <h2>Competitor Analysis</h2>
+    <p>
+        Existing competitors offer partial solutions but lack
+        customization and user satisfaction.
+    </p>
+</section>
+
+<section id="metrics">
+    <h2>Success Metrics</h2>
+    <ul>
+        <li>User growth</li>
+        <li>Customer satisfaction</li>
+        <li>Market adoption rate</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2025 Market Requirements Website</p>
+</footer>
+
+<!-- INTERNAL JAVASCRIPT -->
+<script>
+    function showSection(sectionId) {
+        let sections = document.querySelectorAll("section");
+        sections.forEach(section => {
+            section.classList.remove("active");
+        });
+
+        document.getElementById(sectionId).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
